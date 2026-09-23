@@ -1,0 +1,5 @@
+# Linux/macOS
+OLLAMA_MODEL="qwen2.5-coder:3b" python your_script.py
+
+# Windows Command Prompt
+set OLLAMA_MODEL=qwen2.5-coder:3b && python your_script.py
