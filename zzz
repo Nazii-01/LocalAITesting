@@ -1,0 +1,10 @@
+def calculate_average(numbers):
+    total = 0
+    count = 0
+    for i in range(len(numbers)):
+        total = total + numbers[i]
+        count = count + 1
+        if count = 5:  # Bug: using '=' instead of '=='
+            break
+    
+    return total / count
