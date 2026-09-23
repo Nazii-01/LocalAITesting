@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Available Grocery Shops</h1>
+  <p class="subtitle">Choose a shop to browse products</p>
+  
+  <div class="shops-grid">
+    <div *ngFor="let shop of shops" class="shop-card" (click)="viewShop(shop.id)">
+      <div class="shop-icon">🏪</div>
+      <h2>{{shop.name}}</h2>
+      <p class="address">📍 {{shop.address}}</p>
+      <p class="rating">⭐ {{shop.rating}}/5.0</p>
+      <p class="products-count">{{shop.products.length}} products available</p>
+      <button class="view-btn">View Shop</button>
+    </div>
+  </div>
+</div>
