@@ -1,0 +1,14 @@
+import os
+import sys
+
+# 1. Fetch from system environment or default directly to the 3B model tag
+raw_model = os.getenv("OLLAMA_MODEL", "qwen2.5-coder:3b")
+
+# 2. Sanitize input to strip accidential spaces and enforce lowercasing
+OLLAMA_MODEL = raw_model.strip().lower()
+
+# 3. Simple guardrail validation to verify it's a Qwen family engine
+if "qwen" in OLLAMA_MODEL:
+    print(f"[INFO] Engine initialized using: {OLLAMA_MODEL}")
+else:
+    print(f"[WARN] Non-standard model selected: {OLLAMA_MODEL}")
